@@ -1,7 +1,5 @@
 // app\about\layout.tsx
 
-import { Suspense } from "react";
-
 type Props = {
   children: React.ReactNode;
   columnA: React.ReactNode;
@@ -20,15 +18,9 @@ export default async function AboutLayout({
       <section>
         {children}
         <div style={{ display: "flex", flexDirection: "row", gap: "24px" }}>
-          <Suspense fallback={<div>Завантаження колонки A...</div>}>
-            {columnA}
-          </Suspense>
-          <Suspense fallback={<div>Завантаження колонки B...</div>}>
-            {columnB}
-          </Suspense>
-          <Suspense fallback={<div>Завантаження колонки C...</div>}>
-            {columnC}
-          </Suspense>
+          {columnA}
+          {columnB}
+          {columnC}
         </div>
       </section>
     </div>
