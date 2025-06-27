@@ -1,3 +1,9 @@
+// app\about\page.tsx
+
 export default function About() {
-  return <div>About</div>;
+  return (
+    <div>
+      <p>Це основна сторінка About.</p>
+    </div>
+  );
 }
