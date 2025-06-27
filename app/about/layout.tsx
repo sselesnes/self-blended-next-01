@@ -17,18 +17,20 @@ export default async function AboutLayout({
 }: Props) {
   return (
     <div>
-      <section>{children}</section>
-      <div style={{ display: "flex", flexDirection: "row", gap: "24px" }}>
-        <Suspense fallback={<div>Завантаження колонки A...</div>}>
-          {columnA}
-        </Suspense>
-        <Suspense fallback={<div>Завантаження колонки B...</div>}>
-          {columnB}
-        </Suspense>
-        <Suspense fallback={<div>Завантаження колонки C...</div>}>
-          {columnC}
-        </Suspense>
-      </div>
+      <section>
+        {children}
+        <div style={{ display: "flex", flexDirection: "row", gap: "24px" }}>
+          <Suspense fallback={<div>Завантаження колонки A...</div>}>
+            {columnA}
+          </Suspense>
+          <Suspense fallback={<div>Завантаження колонки B...</div>}>
+            {columnB}
+          </Suspense>
+          <Suspense fallback={<div>Завантаження колонки C...</div>}>
+            {columnC}
+          </Suspense>
+        </div>
+      </section>
     </div>
   );
 }
